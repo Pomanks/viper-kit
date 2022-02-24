@@ -7,4 +7,4 @@
 
 import Foundation
 
-@MainActor public class BasePresenter: NSObject {}
+@MainActor open class BasePresenter: NSObject {}

@@ -7,4 +7,4 @@
 
 import Foundation
 
-public class BaseInteractor: NSObject {}
+open class BaseInteractor: NSObject {}

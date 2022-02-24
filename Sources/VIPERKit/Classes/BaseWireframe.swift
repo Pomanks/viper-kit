@@ -7,7 +7,7 @@
 
 import UIKit
 
-@MainActor public class BaseWireframe<ViewController> where ViewController: UIViewController {
+@MainActor open class BaseWireframe<ViewController> where ViewController: UIViewController {
 
   // MARK: Members
 
@@ -37,7 +37,9 @@ import UIKit
   // We need it in order to retain view controller reference upon first access
   private var temporaryStoredViewController: ViewController?
 
-  init(viewController: ViewController) {
+  public init(title: String? = nil, viewController: ViewController) {
+    viewController.title = title
+
     temporaryStoredViewController = viewController
     _viewController = viewController
   }
